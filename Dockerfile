@@ -13,4 +13,4 @@ ca-certificates \
 WORKDIR /app
 ENV PATH="/app/.venv/bin:/bin:/uv:/uvx:$PATH"
 
-RUN uv pip install pytest pytest-cov pyright
+RUN /bin/uv pip install pytest pytest-cov pyright
