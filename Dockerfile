@@ -13,4 +13,6 @@ ca-certificates \
 WORKDIR /app
 ENV PATH="/app/.venv/bin:$PATH"
 
-RUN uv add --dev pytest pytest-cov pyright
+RUN uv add --dev pytest \
+    && uv add --dev pytest-cov \ 
+    && uv add --dev pyright
