@@ -1,0 +1,20 @@
+on:
+    push:
+        tags:
+            - 'v*.*.*'
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        permissions:
+            packages: write
+            contents: read
+
+        steps:
+            - uses: actions/checkout@v4
+            - name: Build image
+              uses: docker/build-push-action@v6
+              with:
+                push: true
+                tags: ghcr.io/verySpicyHeatWave/python-dev-base:${{github.ref_name}}
+                platforms: linux/amd64, linux/arm64
