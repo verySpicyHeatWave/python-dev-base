@@ -9,6 +9,6 @@ ca-certificates \
 && apt clean
 
 WORKDIR /app
-ENV PATH="/app/.venv/bin:$PATH"
+ENV PATH="/app/.venv/bin:/bin:$PATH"
 
 RUN uv pip install pytest pytest-cov pyright
