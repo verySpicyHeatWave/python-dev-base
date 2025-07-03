@@ -29,5 +29,7 @@ jobs:
               with:
                 context: .
                 push: true
-                tags: ghcr.io/veryspicyheatwave/python-dev-base:${{github.ref_name}}
+                tags: |
+                  ghcr.io/veryspicyheatwave/python-dev-base:latest
+                  ghcr.io/veryspicyheatwave/python-dev-base:${{github.ref_name}}
                 platforms: linux/amd64, linux/arm64
