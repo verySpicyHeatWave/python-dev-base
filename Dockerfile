@@ -6,14 +6,6 @@ SHELL ["/bin/bash", "-c"]
 
 RUN apt update && apt clean && chmod +x /bin/uv /bin/uvx
 
-# RUN apt update && apt install -y --no-install-recommends \
-# git \
-# make \
-# curl \
-# ca-certificates \
-# && apt clean \
-# && chmod +x /bin/uv /bin/uvx
-
 ENV PATH="/bin:$PATH"
 
 WORKDIR /app
